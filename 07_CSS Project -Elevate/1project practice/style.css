@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilroy", sans-serif;
+  }
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  .main {
+    width: 100%;
+    height: 100%;
+    /* background-color: green; */
+  }
+  .main nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100px;
+    /* background-color: red; */
+    padding: 0 30px;
+  }
+  .main nav h4 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .main nav i {
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 50%;
+  }
+  
+  .center {
+    width: 100%;
+    /* height: 40%; */
+    padding: 40px 80px;
+  }
+  .center h1 {
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 90px;
+  }
+  
+  .center .center-in {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 200px;
+    margin-top: 50px;
+  }
+  .center .center-in p {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+  .center .center-in .right {
+    width: 20%;
+  }
+  .center .center-in .elem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 100%; */
+    /* margin: 5px; */
+    padding: 20px 0;
+    border-top: 2px solid #000;
+  }
+  
+  .center .center-in .elem a {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .center .center-in .elem i {
+    font-size: 25px;
+    font-weight: 500;
+    opacity: 0;
+  }
+  .center .center-in .elem:hover i {
+    opacity: 1; /* arow ko response ship bnane keliye */
+  }
+  .center .center-in .elem:hover a {
+    text-decoration: underline; /* text ko under line bnane keliye */
+    /* background-color: rgb(142, 142, 142); */
+  }
+  .bottom {
+    width: 100%;
+    height: 35%;
+    /* background-color: red; */
+    /* unsplash.com  photo le skte hain */
+    background-image: url("https://plus.unsplash.com/premium_photo-1673757121102-0ca51260861f?w=1000&aut");
+    background-size: cover;
+    background-position: 0 27%;
+  }
+  

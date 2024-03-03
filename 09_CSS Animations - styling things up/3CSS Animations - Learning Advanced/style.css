@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  
+  img {
+    width: 250px;
+    position: relative;
+    animation-name: girl;
+    animation-duration: 2s;
+    animation-delay: 1s;
+  }
+  
+  .box1 {
+    width: 300px;
+    height: 300px;
+    background-color: crimson;
+    position: relative;
+    animation-name: move; /* animation name link krne keliye */
+    animation-duration: 2s;
+    animation-delay: 1s;
+    /* animation-fill-mode: forwards; */
+    /* animation-iteration-count: 2; */  /* animation kitne baar chlega */
+    animation-iteration-count: infinite;
+    /* animation-direction: normal; */
+    animation-direction: alternate;
+    /* animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1); */
+    animation-timing-function: ease-in-out; /* start end ki time mtlb start fast ho rha or ending slow ho rha ye sb dekhne keliye */
+  }
+  .box2 {
+    width: 300px;
+    height: 300px;
+    background-color: seagreen;
+    position: relative;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-delay: 2s;  /* kuchh der ruk kr animation start krne keliye */
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+    /* animation-fill-mode: forwards; */
+  }
+
+
+  @keyframes move {
+    from {
+      left: 0;
+    }
+    to {
+      left: 75%;
+    }
+  }
+  @keyframes girl {
+    /* from {
+      left: 0;
+      top: 0;
+    }
+    to {
+      left: 80%;
+      top: 50%;
+    } */
+
+    /* apne hisab se move krane keliye  % ka use krte hain 
+    isme to or from ke jgh pr % likhte hain
+    */ 
+    0% {
+      left: 0;
+      top: 0;
+      rotate: 0deg;
+    }
+    50% {
+      left: 80%;
+      top: 0;
+      rotate: 220deg;
+    }
+    100% {
+      left: 80%;
+      top: 50%;
+      rotate: 360deg;
+    }
+  }
+  
+
+/* ek sath kitne bhi aliment pr ek hi animation lga skte hai
+mtlb ek animation any aliment pr work krega */

@@ -1,0 +1,86 @@
+js ko live server pr run krana keliye (shift ctrl j)
+
+1**js the language
+---- java script brendem eick ne 20 dasys me bnnay isliye isme kaafi dikkt tha..is pro.. ko dur ES(ekma script) ye js ki pro.dur krne pr abhi bhi kaam krti hain
+js = language
+js mangement by ecmascript= naye features lana ,purane hatana
+js ke 2 impotent part hain
+es5 - vair
+es6 - let
+
+js = code likhna sekhna , main features
+js the dom = code likhkar cheejein banana seekhna
+
+
+
+
+**basic 
+----- file connect and load karege script ko , basics of code execution , grammar and understanding of errors      (js ke file ko html me body ke ander link krte hain)
+
+errors dekhne keliye = (ctrl shift j )
+
+
+**inbuits features (console ,alert , prompt) ye 3 brower me inbilt aata hainn
+
+//console.log
+--console.log(); print krane keliye jo aap print krana chahte hain aap console ke ander likh dijiye print ho jayga "" ya '' me
+
+console.warn
+-- waranig ke rup me print hota hain 
+
+console.error
+-- error btayga
+
+// console alert prompt 
+alert("hey") - ye aapko live server chlu hone alrt ke rup me msg print krane ke kaam aata hain 
+
+// prompt alert ka bhai hain jo ki alert se ek kadam aage hain 
+prompt("hello") ye alrt ke sath aap ko input keliye puchhega bhi 
+
+
+2**variables and constants
+ek contener hota hain variables me value ko change kr skte hain 
+but constants me value ko change nhi kr skte hain 
+
+hr programming language me data se deal krna hota hain or alag alag prakaar ka data ho skta hain ab aisa data jisme humein deal karana hain wo save to krna padhega na save krne ke liye hume koi savinge space chahiye  jaha pr data save ho jaay  ye  save krne keliye unhe kuchh naam bhi dena pdheg and isliye hume variable and constants nanaane padte hain taaki data save ho jaay and unka koi naam bhi taki use baad me hmm unhe acces kar paaye.
+
+(js apna data heap memory me store krta jo ki crome pr hota ahin)
+
+Example -
+ var discount = 10;
+ discount = 22;
+
+conts discount = 12;
+discount = 23; aisa aap conts me nhi kr skte hain 
+
+
+
+
+
+3compilers and interpreters
+-----
+
+4window
+-----
+
+5types
+-----
+conditionals
+-----
+loops
+----
+functions
+---------
+arrays
+------
+objects
+------
+--------------------------------------------
+
+
+
+
+prototypes
+prototypal inheritance
+asynchronous
+es 6 climax

@@ -1,0 +1,512 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+  }
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+/* 1 */
+  .main {
+    width: 100%;
+    height: 100%;
+    background-color: #f8f8f8;
+    position: relative; /* position relative ka use child control me rkhne keliye krte hain */
+    padding-top: 0.1px; /* jb hm main se koi aliment div nav class ko niche late hain 
+    to nav ke sath page bhi niche aa jata hain (is proplem ko dur krne keliye padding-top: 0.1px; use krte hain */
+  }
+
+/* 2 */
+  .main .nav {
+    width: 100%;
+    height: 12vh;
+    margin-top: 30px;
+    border-top: 2px solid #000; /* line keliye */
+    border-bottom: 2px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  .main .nav h3 {
+  display: none;    /* icon htane keliye */
+  
+  }
+
+  .main .nav h1 {
+    width: 20%;
+    height: 100%;
+    font-family: monument;
+    font-size: 45px;
+    letter-spacing: -1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .main .nav h1::after { /* ©️ copy right simbel keliye (window .) */
+    content: "©";
+    font-family: gilroy;
+    font-size: 22px;
+    font-weight: 400;
+    position: absolute;
+    top: 10;
+    right:16%;
+  }
+  .main .nav h1::before {
+    content: "model management";
+    font-family: gilroy;
+    font-size: 15px;
+    font-weight: 300;
+    position: absolute;
+    bottom: 5%;
+    right: 0%;
+    color: #666;
+    letter-spacing: 0.5px;
+  }
+  .main .nav h2 {
+    width: 20%;
+    height: 100%;
+    font-size: 22px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid #000;
+  }
+  .main .nav h2:nth-last-child(1) { /* jb ek jaise multiple aliment use krte hain to koi prticuler aliment target krne keliye use krte hain */ 
+    width: 10%;
+  }
+  .main .nav h2:nth-last-child(2) {
+    width: 29%;
+  }
+   
+
+  .center {
+    height: 90%;
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+    padding: 3vw 4vw;
+  }
+  
+  .center .content {
+    height: 100%;
+    width: 100%;
+    /* background-color: blue; */
+    position: relative;
+  }
+  
+  /* video */
+  .center .content video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .center .overlay {
+    height: 52%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    /* background-color: red; */
+    padding: 3vw;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.154); /* video me background color keliye */
+   /* backdrop-filter: blur(10px); */
+  }
+  
+  .center .over1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2vw;
+  }
+  
+  .center .over1 h1 {
+    font-family: monument;
+    font-size: 3.6vw;
+    /* font-weight: 100; */
+    /*mix-blend-mode:color ; */
+  }
+  
+  .center .over1 h2 {
+    font-size: 1vw;
+    padding: 2vw 2.2vw;
+    /* background-color: blue; */
+    border-radius: 50%;
+    /* font-weight: 100; */
+    border: 1px solid #fff;
+    /* border-bottom: 5px solid #fff; */
+  }
+
+
+  /* arrow  keliye */
+  .center .over2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid #fff;
+    padding: 1.5vw 0;
+  }
+  
+  .center .over2 h4 {
+    font-size: 1.3vw;
+    font-weight: 500;
+  }
+  
+  .center .over2 img {
+    height: 3vw;
+  }
+
+
+
+ /* 3 , 4 scroll photo keliye */
+  .scroll {
+    width: 100%;
+    height: 40vh;
+    white-space: nowrap; /* ek line me dono contener ko lane keliye (nowrap) ka use krte hain
+    iske jgh display flex bhi use kr but wo alimet usi jgh pr flexibel ki trah dba ke rkh dega */ 
+    overflow-x: hidden; /* pura page scroll hoga agr isko n use kre to */
+    overflow-y: hidden;
+  }
+  .scroll .container {
+    width: 110%;
+    height: 100%;
+    display: inline-block;
+    padding: 2vw; /* aliment ko ander ki trph shift krne keliye padding ka use krte hain */
+    animation-name: anime; /* animation call */
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; /* hmesha chlte rahe uske liye infinite ka use krte hain */
+  }
+  .scroll .container img {
+    height: 95%;
+    border-radius: 50%;
+    width: 15%;
+    margin: 1vw;
+    object-fit: cover;
+    object-position: 30% 30%;
+  }
+  
+  /* animesion lgane keliye sb se pahle animation kisi naam se bnate hain 
+  phir us name ko  main file me call krte hain   */
+  @keyframes anime {
+    from {
+      transform: translateX(0);
+    }
+  
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+
+  /* 5 */
+  .alphabet {
+    height: 11vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+  }
+  
+  .alphabet h5 {
+    font-size: 1.7vw;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 4px;
+    border-bottom: 2px solid #000000;
+    margin-right: 2vw;
+  }
+  
+  /* h6 A b C D keliye */
+  .alphabet h6 {
+    font-size: 1vw;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 4px;
+    /* background-color: rgb(251, 255, 0); */
+    padding: 0.5vw 0.7vw;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #00000000;
+    transition: all ease 0.2s;
+  }
+
+  /* tuch hone pr hover jo A B C D me ho rha hain */
+  .alphabet h6:hover {
+    border: 1px solid #000;
+  }
+  
+  /* 6 */
+  .page2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw 2vw;
+    gap: 3vw;
+  }
+  
+  .page2 .page2-part1 {
+    width: 60%;
+    height: 100%;
+  }
+  
+  .page2 .page2-part1 img {
+    width: 90%;
+    height: 110%;
+    object-fit: cover;
+  }
+  .page2 .page2-part2 {
+    width: 60%;
+    height: 100%;
+  }
+  .page2 .page2-part2 img {
+    width: 90%;
+    height: 80%;
+    object-fit: cover;
+  }
+  .page2 .page2-part2 .box {
+    width: 90%;
+    height: 22%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1vw;
+  }
+  .page2 .page2-part2 .box h5 {
+    font-size: 17px;
+    font-weight: 500;
+  }
+  
+  .page2 .page2-part2 .box p {
+    text-align: justify;
+    font-size: 17px;
+    line-height: 22px;
+  }
+  
+
+/* 7 */
+  .shot {
+    width: 100%;
+    height: 100%;
+    padding: 3vw 4vw;
+  }
+  .shot h2 {
+    font-family: monument;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .shot .shot-section {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3vw;
+  }
+  .shot .shot-section .rotate {
+    width: 60%;
+    text-align: center;
+  }
+  .shot .shot-section .rotate img {
+    width: 60%;
+  }
+  .shot .shot-section .rotate p {
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-right: 4vw;
+    margin-top: 17vw;
+  }
+  
+  .shot .shot-section .image {
+    width: 70%;
+    height: 100%;
+  }
+  .shot .shot-section .image img {
+    width: 90%;
+    height: 70%;
+  }
+  
+
+/* 8 */
+  .full-image {
+    width: 100%;
+    height: 100%;
+    margin-top: 20vw;
+    padding: 1vw 4vw;
+    position: relative;
+  }
+  .full-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 30% 30%;
+  }
+  .full-image h5 {
+    font-size: 15px;
+    font-weight: 400;
+    padding: 1vw;
+    position: absolute;
+    top: 3vw;
+    right: 10vw;
+    color: #f8f8f8;
+    border-radius: 50%;
+    border: 1px solid #473e3e;
+    background-color: transparent;
+  }
+
+  /*9  update part */
+  .page3 {
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+    padding: 5vw 4vw;
+  }
+  
+  .page3 > h1 {
+    text-align: center;
+    font-family: monument;
+    text-transform: uppercase;
+    font-size: 3vw;
+    /* font-weight: 900; */
+    margin-bottom: 7vh;
+  }
+  
+  .elem {
+    height: 15.5vh;
+    width: 100%;
+    /* background-color: red; */
+    border-top: 2px solid #000; /* line me dives krne keliye */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+    position: relative;
+  
+    transition: all ease 0.7s;
+  }
+  
+  .elem img {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    border-radius: 50%;
+    left: 12%;
+    opacity: 0;
+    object-fit: cover;
+    object-position: top;
+    transition: all ease 0.7s;
+  }
+  
+  .elem h4 {
+    font-family: monument;
+    font-size: 1.1vw;
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 6%;
+    /* background-color: red; */
+  }
+  
+  .elem .elem-part2 {
+    width: 45%;
+    /* background-color: red; */
+  }
+  
+  .elem-part2 h1 {
+    font-size: 2.7vw;
+    font-weight: 500;
+  }
+  
+  .elem-part2 h5 {
+    font-size: 0.8vw;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .elem:nth-last-child(1) {
+    border-bottom: 2px solid #000;
+  }
+
+  /* tuch krne pr photo animestion */
+  .elem:hover {
+    background-color: #f1f1f1;
+  }
+  .elem:nth-last-child(1) img {
+    left: 40%;
+  }
+  
+  .elem:nth-last-child(3) img {
+    left: 40%;
+  }
+  
+  .elem:hover img {
+    opacity: 1;
+    left: 24%;
+  }
+
+  
+
+/* 10 premier part */
+  .marque {
+    /* height: 15vh; */
+    width: 100%;
+    /* background-color: red; */
+    padding: 0.8vw;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+  }
+  
+  .marque h1 {
+    display: inline-block;
+    font-size: 3vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    -webkit-text-stroke: 2px black;
+    color: transparent;
+    letter-spacing: 3px;
+    font-family: monument;
+    /* background-color: blue; */
+    margin-right: 16px;
+    animation-name: move;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes move {
+    from {
+      transform: translateX(0);
+    }
+  
+    to {
+      transform: translateX(calc(-100% - 20px)); /* gap ko dur krne keliye -20 kisi 2 aliment ke bich me 4px ka gap hmesh arhta hain */
+    }
+  }
+  
+  .footer {
+    height: 10%;
+    width: 100%;
+  }
+  
